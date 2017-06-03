@@ -58,7 +58,7 @@ TrainConvNet = {
         momentumAsTimeConstant = 0*20:607.44
         maxEpochs = 30
         L2RegWeight = 0.002
-        dropoutRate = 0*5:0.5
+        dropoutRate = 0*5:0.2
 
         numMBsToShowResult = 100
     }
