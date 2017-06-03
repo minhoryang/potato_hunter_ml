@@ -1,0 +1,51 @@
+CNTK 2.0rc2 (HEAD f19045, Apr 21 2017 07:25:06) on mynameis at 2017/06/03 07:35:17
+
+cntk  configFile=potatoHunter.cntk
+-------------------------------------------------------------------
+Build info: 
+
+		Built time: Apr 21 2017 07:23:45
+		Last modified date: Fri Apr 21 07:22:43 2017
+		Build type: release
+		Build target: CPU-only
+		With 1bit-SGD: no
+		With ASGD: yes
+		Math lib: mkl
+		Build Branch: HEAD
+		Build SHA1: f190457aecbfe07c3fe27c89f36108bc2488727b
+		Built by Source/CNTK/buildinfo.h$$0 on 68dadaff3278
+		Build Path: /home/philly/jenkins/workspace/CNTK-Build-Linux
+		MPI distribution: Open MPI
+		MPI version: 1.10.3
+-------------------------------------------------------------------
+
+##############################################################################
+#                                                                            #
+# TrainConvNet command (train action)                                        #
+#                                                                            #
+##############################################################################
+
+
+Starting from checkpoint. Loading network from './output/model/potato_hunter.11'.
+
+Model has 48 nodes. Using CPU.
+
+Training criterion:   ce = CrossEntropyWithSoftmax
+Evaluation criterion: errs = ClassificationError
+
+Training 9583170 parameters in 14 parameter tensors.
+
+Setting dropout rate to 0.2.
+Finished Epoch[12 of 12]: [Training] ce = 0.47998676 * 200; errs = 20.500% * 200; totalSamplesSeen = 2400; learningRatePerSample = 0.0001408518; epochTime=21.73s
+
+
+##############################################################################
+#                                                                            #
+# Test command (test action)                                                 #
+#                                                                            #
+##############################################################################
+
+evalNodeNames are not specified, using all the default evalnodes and training criterion nodes.
+Final Results: Minibatch[1-1]: errs = 42.500% * 40; ce = 0.68873348 * 40; perplexity = 1.99119206
+
+COMPLETED.

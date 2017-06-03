@@ -1,0 +1,87 @@
+Node 'model.arrayOfFunctions[14].arrayOfFunctions[0].W' (LearnableParameter operation) operation: Tensor shape was inferred as [128 x 256].
+Node 'model.arrayOfFunctions[17].W' (LearnableParameter operation) operation: Tensor shape was inferred as [2 x 128].
+
+Model has 48 nodes. Using CPU.
+
+Training criterion:   ce = CrossEntropyWithSoftmax
+Evaluation criterion: errs = ClassificationError
+
+Training 9583170 parameters in 14 parameter tensors.
+
+Finished Epoch[ 1 of 15]: [Training] ce = 0.69109741 * 200; errs = 47.000% * 200; totalSamplesSeen = 200; learningRatePerSample = 0.0015625; epochTime=21.2168s
+Finished Epoch[ 2 of 15]: [Training] ce = 0.69240028 * 200; errs = 49.500% * 200; totalSamplesSeen = 400; learningRatePerSample = 0.0015625; epochTime=20.5725s
+Loading (rolling back to) previous model with best training-criterion value: ./output/model/potato_hunter.1.
+learnRatePerSample reduced to 0.00096562501
+SGD: revoke back to and update checkpoint file for epoch 1
+Finished Epoch[ 2 of 15]: [Training] ce = 0.67860115 * 200; errs = 43.500% * 200; totalSamplesSeen = 400; learningRatePerSample = 0.00096562501; epochTime=19.8592s
+Finished Epoch[ 3 of 15]: [Training] ce = 0.65041489 * 200; errs = 37.000% * 200; totalSamplesSeen = 600; learningRatePerSample = 0.00096562501; epochTime=20.2816s
+Finished Epoch[ 4 of 15]: [Training] ce = 0.59747078 * 200; errs = 31.500% * 200; totalSamplesSeen = 800; learningRatePerSample = 0.00096562501; epochTime=20.3463s
+Finished Epoch[ 5 of 15]: [Training] ce = 0.64092728 * 200; errs = 33.000% * 200; totalSamplesSeen = 1000; learningRatePerSample = 0.00096562501; epochTime=19.8172s
+Loading (rolling back to) previous model with best training-criterion value: ./output/model/potato_hunter.4.
+learnRatePerSample reduced to 0.00059675626
+SGD: revoke back to and update checkpoint file for epoch 4
+Finished Epoch[ 5 of 15]: [Training] ce = 0.57887295 * 200; errs = 30.000% * 200; totalSamplesSeen = 1000; learningRatePerSample = 0.00059675626; epochTime=19.6576s
+Setting dropout rate to 0.2.
+Finished Epoch[ 6 of 15]: [Training] ce = 0.63577106 * 200; errs = 37.500% * 200; totalSamplesSeen = 1200; learningRatePerSample = 0.00059675626; epochTime=19.5013s
+Loading (rolling back to) previous model with best training-criterion value: ./output/model/potato_hunter.5.
+learnRatePerSample reduced to 0.00036879537
+SGD: revoke back to and update checkpoint file for epoch 5
+Finished Epoch[ 6 of 15]: [Training] ce = 0.57229580 * 200; errs = 30.500% * 200; totalSamplesSeen = 1200; learningRatePerSample = 0.00036879537; epochTime=19.553s
+Finished Epoch[ 7 of 15]: [Training] ce = 0.53950012 * 200; errs = 23.000% * 200; totalSamplesSeen = 1400; learningRatePerSample = 0.00036879537; epochTime=19.6313s
+Finished Epoch[ 8 of 15]: [Training] ce = 0.66629723 * 200; errs = 37.500% * 200; totalSamplesSeen = 1600; learningRatePerSample = 0.00036879537; epochTime=19.8154s
+Loading (rolling back to) previous model with best training-criterion value: ./output/model/potato_hunter.7.
+learnRatePerSample reduced to 0.00022791554
+SGD: revoke back to and update checkpoint file for epoch 7
+Finished Epoch[ 8 of 15]: [Training] ce = 0.55276119 * 200; errs = 26.000% * 200; totalSamplesSeen = 1600; learningRatePerSample = 0.00022791554; epochTime=19.9011s
+Loading (rolling back to) previous model with best training-criterion value: ./output/model/potato_hunter.7.
+learnRatePerSample reduced to 0.0001408518
+SGD: revoke back to and update checkpoint file for epoch 7
+Finished Epoch[ 8 of 15]: [Training] ce = 0.53122231 * 200; errs = 25.000% * 200; totalSamplesSeen = 1600; learningRatePerSample = 0.0001408518; epochTime=20.0706s
+Finished Epoch[ 9 of 15]: [Training] ce = 0.51369110 * 200; errs = 25.000% * 200; totalSamplesSeen = 1800; learningRatePerSample = 0.0001408518; epochTime=19.7196s
+Finished Epoch[10 of 15]: [Training] ce = 0.50634403 * 200; errs = 25.500% * 200; totalSamplesSeen = 2000; learningRatePerSample = 0.0001408518; epochTime=20.0133s
+Finished Epoch[11 of 15]: [Training] ce = 0.49235489 * 200; errs = 23.500% * 200; totalSamplesSeen = 2200; learningRatePerSample = 0.0001408518; epochTime=19.8974s
+Finished Epoch[12 of 15]: [Training] ce = 0.47998676 * 200; errs = 20.500% * 200; totalSamplesSeen = 2400; learningRatePerSample = 0.0001408518; epochTime=20.0035s
+Finished Epoch[13 of 15]: [Training] ce = 0.48830364 * 200; errs = 21.500% * 200; totalSamplesSeen = 2600; learningRatePerSample = 0.0001408518; epochTime=19.9222s
+Loading (rolling back to) previous model with best training-criterion value: ./output/model/potato_hunter.12.
+learnRatePerSample reduced to 8.7046414e-05
+SGD: revoke back to and update checkpoint file for epoch 12
+Finished Epoch[13 of 15]: [Training] ce = 0.48535034 * 200; errs = 21.500% * 200; totalSamplesSeen = 2600; learningRatePerSample = 8.7046414e-05; epochTime=19.8013s
+Loading (rolling back to) previous model with best training-criterion value: ./output/model/potato_hunter.12.
+learnRatePerSample reduced to 5.3794684e-05
+SGD: revoke back to and update checkpoint file for epoch 12
+Finished Epoch[13 of 15]: [Training] ce = 0.48532623 * 200; errs = 22.000% * 200; totalSamplesSeen = 2600; learningRatePerSample = 5.3794684e-05; epochTime=19.7247s
+Loading (rolling back to) previous model with best training-criterion value: ./output/model/potato_hunter.12.
+learnRatePerSample reduced to 3.3245115e-05
+SGD: revoke back to and update checkpoint file for epoch 12
+Finished Epoch[13 of 15]: [Training] ce = 0.48568035 * 200; errs = 22.000% * 200; totalSamplesSeen = 2600; learningRatePerSample = 3.3245115e-05; epochTime=19.5539s
+Loading (rolling back to) previous model with best training-criterion value: ./output/model/potato_hunter.12.
+learnRatePerSample reduced to 2.0545481e-05
+SGD: revoke back to and update checkpoint file for epoch 12
+Finished Epoch[13 of 15]: [Training] ce = 0.48616669 * 200; errs = 23.000% * 200; totalSamplesSeen = 2600; learningRatePerSample = 2.0545481e-05; epochTime=20.1995s
+Loading (rolling back to) previous model with best training-criterion value: ./output/model/potato_hunter.12.
+learnRatePerSample reduced to 1.2697107e-05
+SGD: revoke back to and update checkpoint file for epoch 12
+Finished Epoch[13 of 15]: [Training] ce = 0.48651535 * 200; errs = 22.500% * 200; totalSamplesSeen = 2600; learningRatePerSample = 1.2697107e-05; epochTime=20.0736s
+Loading (rolling back to) previous model with best training-criterion value: ./output/model/potato_hunter.12.
+learnRatePerSample reduced to 7.8468122e-06
+SGD: revoke back to and update checkpoint file for epoch 12
+Finished Epoch[13 of 15]: [Training] ce = 0.48677273 * 200; errs = 22.000% * 200; totalSamplesSeen = 2600; learningRatePerSample = 7.8468122e-06; epochTime=19.8895s
+Loading (rolling back to) previous model with best training-criterion value: ./output/model/potato_hunter.12.
+learnRatePerSample reduced to 4.8493299e-06
+SGD: revoke back to and update checkpoint file for epoch 12
+Finished Epoch[13 of 15]: [Training] ce = 0.48695038 * 200; errs = 22.500% * 200; totalSamplesSeen = 2600; learningRatePerSample = 4.8493299e-06; epochTime=20.2938s
+Loading (rolling back to) previous model with best training-criterion value: ./output/model/potato_hunter.12.
+learnRatePerSample reduced to 2.9968859e-06
+SGD: revoke back to and update checkpoint file for epoch 12
+Finished Epoch[13 of 15]: [Training] ce = 0.48707111 * 200; errs = 22.500% * 200; totalSamplesSeen = 2600; learningRatePerSample = 2.9968859e-06; epochTime=19.6651s
+Loading (rolling back to) previous model with best training-criterion value: ./output/model/potato_hunter.12.
+learnRatePerSample reduced to 1.8520755e-06
+SGD: revoke back to and update checkpoint file for epoch 12
+Finished Epoch[13 of 15]: [Training] ce = 0.48715000 * 200; errs = 22.500% * 200; totalSamplesSeen = 2600; learningRatePerSample = 1.8520755e-06; epochTime=20.0207s
+Loading (rolling back to) previous model with best training-criterion value: ./output/model/potato_hunter.12.
+learnRatePerSample reduced to 1.1445827e-06
+SGD: revoke back to and update checkpoint file for epoch 12
+Finished Epoch[13 of 15]: [Training] ce = 0.48719982 * 200; errs = 22.500% * 200; totalSamplesSeen = 2600; learningRatePerSample = 1.1445827e-06; epochTime=20.2895s
+Loading (rolling back to) previous model with best training-criterion value: ./output/model/potato_hunter.12.
+learnRatePerSample reduced to 7.0735208e-07
+SGD: revoke back to and update checkpoint file for epoch 12

@@ -1,0 +1,85 @@
+CNTK 2.0rc2 (HEAD f19045, Apr 21 2017 07:25:06) on mynameis at 2017/06/03 06:44:22
+
+cntk  configFile=potatoHunter.cntk
+-------------------------------------------------------------------
+Build info: 
+
+		Built time: Apr 21 2017 07:23:45
+		Last modified date: Fri Apr 21 07:22:43 2017
+		Build type: release
+		Build target: CPU-only
+		With 1bit-SGD: no
+		With ASGD: yes
+		Math lib: mkl
+		Build Branch: HEAD
+		Build SHA1: f190457aecbfe07c3fe27c89f36108bc2488727b
+		Built by Source/CNTK/buildinfo.h$$0 on 68dadaff3278
+		Build Path: /home/philly/jenkins/workspace/CNTK-Build-Linux
+		MPI distribution: Open MPI
+		MPI version: 1.10.3
+-------------------------------------------------------------------
+
+##############################################################################
+#                                                                            #
+# TrainConvNet command (train action)                                        #
+#                                                                            #
+##############################################################################
+
+Node 'model.arrayOfFunctions[1].W' (LearnableParameter operation) operation: Tensor shape was inferred as [3 x 3 x 3 x 64].
+Node 'model.arrayOfFunctions[3].W' (LearnableParameter operation) operation: Tensor shape was inferred as [3 x 3 x 64 x 64].
+Node 'model.arrayOfFunctions[6].W' (LearnableParameter operation) operation: Tensor shape was inferred as [3 x 3 x 64 x 64].
+Node 'model.arrayOfFunctions[8].W' (LearnableParameter operation) operation: Tensor shape was inferred as [3 x 3 x 64 x 64].
+Node 'model.arrayOfFunctions[11].arrayOfFunctions[0].W' (LearnableParameter operation) operation: Tensor shape was inferred as [256 x 24 x 24 x 64].
+Node 'model.arrayOfFunctions[14].arrayOfFunctions[0].W' (LearnableParameter operation) operation: Tensor shape was inferred as [128 x 256].
+Node 'model.arrayOfFunctions[17].W' (LearnableParameter operation) operation: Tensor shape was inferred as [2 x 128].
+
+Model has 48 nodes. Using CPU.
+
+Training criterion:   ce = CrossEntropyWithSoftmax
+Evaluation criterion: errs = ClassificationError
+
+Training 9583170 parameters in 14 parameter tensors.
+
+Finished Epoch[ 1 of 30]: [Training] ce = 0.69109741 * 200; errs = 47.000% * 200; totalSamplesSeen = 200; learningRatePerSample = 0.0015625; epochTime=23.0423s
+Finished Epoch[ 2 of 30]: [Training] ce = 0.69240028 * 200; errs = 49.500% * 200; totalSamplesSeen = 400; learningRatePerSample = 0.0015625; epochTime=21.7882s
+Finished Epoch[ 3 of 30]: [Training] ce = 0.65262367 * 200; errs = 35.000% * 200; totalSamplesSeen = 600; learningRatePerSample = 0.0015625; epochTime=22.0276s
+Finished Epoch[ 4 of 30]: [Training] ce = 0.59798203 * 200; errs = 28.500% * 200; totalSamplesSeen = 800; learningRatePerSample = 0.0015625; epochTime=22.5661s
+Finished Epoch[ 5 of 30]: [Training] ce = 0.75729431 * 200; errs = 51.500% * 200; totalSamplesSeen = 1000; learningRatePerSample = 0.0015625; epochTime=22.1342s
+Setting dropout rate to 0.5.
+Finished Epoch[ 6 of 30]: [Training] ce = 0.66274284 * 200; errs = 35.000% * 200; totalSamplesSeen = 1200; learningRatePerSample = 0.0015625; epochTime=21.3173s
+Finished Epoch[ 7 of 30]: [Training] ce = 0.62746922 * 200; errs = 29.500% * 200; totalSamplesSeen = 1400; learningRatePerSample = 0.0015625; epochTime=22.0834s
+Finished Epoch[ 8 of 30]: [Training] ce = 0.89348579 * 200; errs = 38.000% * 200; totalSamplesSeen = 1600; learningRatePerSample = 0.0015625; epochTime=22.7125s
+Finished Epoch[ 9 of 30]: [Training] ce = 0.70228889 * 200; errs = 50.000% * 200; totalSamplesSeen = 1800; learningRatePerSample = 0.0015625; epochTime=22.5758s
+Finished Epoch[10 of 30]: [Training] ce = 0.68717476 * 200; errs = 50.000% * 200; totalSamplesSeen = 2000; learningRatePerSample = 0.0015625; epochTime=21.6397s
+Finished Epoch[11 of 30]: [Training] ce = 0.68149887 * 200; errs = 50.000% * 200; totalSamplesSeen = 2200; learningRatePerSample = 0.00046874999; epochTime=22.2459s
+Finished Epoch[12 of 30]: [Training] ce = 0.67512810 * 200; errs = 49.500% * 200; totalSamplesSeen = 2400; learningRatePerSample = 0.00046874999; epochTime=22.7999s
+Finished Epoch[13 of 30]: [Training] ce = 0.67547684 * 200; errs = 49.500% * 200; totalSamplesSeen = 2600; learningRatePerSample = 0.00046874999; epochTime=21.4179s
+Finished Epoch[14 of 30]: [Training] ce = 0.67142601 * 200; errs = 49.000% * 200; totalSamplesSeen = 2800; learningRatePerSample = 0.00046874999; epochTime=21.7214s
+Finished Epoch[15 of 30]: [Training] ce = 0.66760284 * 200; errs = 46.500% * 200; totalSamplesSeen = 3000; learningRatePerSample = 0.00046874999; epochTime=21.9907s
+Finished Epoch[16 of 30]: [Training] ce = 0.66261612 * 200; errs = 45.000% * 200; totalSamplesSeen = 3200; learningRatePerSample = 0.00046874999; epochTime=22.175s
+Finished Epoch[17 of 30]: [Training] ce = 0.65601723 * 200; errs = 43.500% * 200; totalSamplesSeen = 3400; learningRatePerSample = 0.00046874999; epochTime=22.615s
+Finished Epoch[18 of 30]: [Training] ce = 0.64780487 * 200; errs = 36.000% * 200; totalSamplesSeen = 3600; learningRatePerSample = 0.00046874999; epochTime=21.7636s
+Finished Epoch[19 of 30]: [Training] ce = 0.63900387 * 200; errs = 36.500% * 200; totalSamplesSeen = 3800; learningRatePerSample = 0.00046874999; epochTime=21.815s
+Finished Epoch[20 of 30]: [Training] ce = 0.63878941 * 200; errs = 33.500% * 200; totalSamplesSeen = 4000; learningRatePerSample = 0.00046874999; epochTime=22.1767s
+Finished Epoch[21 of 30]: [Training] ce = 0.64003777 * 200; errs = 30.000% * 200; totalSamplesSeen = 4200; learningRatePerSample = 0.00015625; epochTime=21.705s
+Finished Epoch[22 of 30]: [Training] ce = 0.63087547 * 200; errs = 28.000% * 200; totalSamplesSeen = 4400; learningRatePerSample = 0.00015625; epochTime=22.6318s
+Finished Epoch[23 of 30]: [Training] ce = 0.63354485 * 200; errs = 30.500% * 200; totalSamplesSeen = 4600; learningRatePerSample = 0.00015625; epochTime=21.9048s
+Finished Epoch[24 of 30]: [Training] ce = 0.62851234 * 200; errs = 30.000% * 200; totalSamplesSeen = 4800; learningRatePerSample = 0.00015625; epochTime=21.8947s
+Finished Epoch[25 of 30]: [Training] ce = 0.62244236 * 200; errs = 29.500% * 200; totalSamplesSeen = 5000; learningRatePerSample = 0.00015625; epochTime=22.3582s
+Finished Epoch[26 of 30]: [Training] ce = 0.61811871 * 200; errs = 29.500% * 200; totalSamplesSeen = 5200; learningRatePerSample = 0.00015625; epochTime=22.0604s
+Finished Epoch[27 of 30]: [Training] ce = 0.62703655 * 200; errs = 32.000% * 200; totalSamplesSeen = 5400; learningRatePerSample = 0.00015625; epochTime=22.1317s
+Finished Epoch[28 of 30]: [Training] ce = 0.61514256 * 200; errs = 30.000% * 200; totalSamplesSeen = 5600; learningRatePerSample = 0.00015625; epochTime=22.0589s
+Finished Epoch[29 of 30]: [Training] ce = 0.62175106 * 200; errs = 29.000% * 200; totalSamplesSeen = 5800; learningRatePerSample = 0.00015625; epochTime=22.2175s
+Finished Epoch[30 of 30]: [Training] ce = 0.62037224 * 200; errs = 31.500% * 200; totalSamplesSeen = 6000; learningRatePerSample = 0.00015625; epochTime=22.6227s
+
+
+##############################################################################
+#                                                                            #
+# Test command (test action)                                                 #
+#                                                                            #
+##############################################################################
+
+evalNodeNames are not specified, using all the default evalnodes and training criterion nodes.
+Final Results: Minibatch[1-1]: errs = 55.000% * 40; ce = 0.70063515 * 40; perplexity = 2.01503214
+
+COMPLETED.

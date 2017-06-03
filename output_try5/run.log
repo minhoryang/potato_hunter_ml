@@ -1,0 +1,87 @@
+CNTK 2.0rc2 (HEAD f19045, Apr 21 2017 07:25:06) on mynameis at 2017/06/03 07:42:29
+
+cntk  configFile=potatoHunter.cntk
+-------------------------------------------------------------------
+Build info: 
+
+		Built time: Apr 21 2017 07:23:45
+		Last modified date: Fri Apr 21 07:22:43 2017
+		Build type: release
+		Build target: CPU-only
+		With 1bit-SGD: no
+		With ASGD: yes
+		Math lib: mkl
+		Build Branch: HEAD
+		Build SHA1: f190457aecbfe07c3fe27c89f36108bc2488727b
+		Built by Source/CNTK/buildinfo.h$$0 on 68dadaff3278
+		Build Path: /home/philly/jenkins/workspace/CNTK-Build-Linux
+		MPI distribution: Open MPI
+		MPI version: 1.10.3
+-------------------------------------------------------------------
+
+##############################################################################
+#                                                                            #
+# TrainConvNet command (train action)                                        #
+#                                                                            #
+##############################################################################
+
+Node 'model.arrayOfFunctions[1].W' (LearnableParameter operation) operation: Tensor shape was inferred as [3 x 3 x 3 x 64].
+Node 'model.arrayOfFunctions[3].W' (LearnableParameter operation) operation: Tensor shape was inferred as [3 x 3 x 64 x 64].
+Node 'model.arrayOfFunctions[6].W' (LearnableParameter operation) operation: Tensor shape was inferred as [3 x 3 x 64 x 64].
+Node 'model.arrayOfFunctions[8].W' (LearnableParameter operation) operation: Tensor shape was inferred as [3 x 3 x 64 x 64].
+Node 'model.arrayOfFunctions[11].arrayOfFunctions[0].W' (LearnableParameter operation) operation: Tensor shape was inferred as [256 x 24 x 24 x 64].
+Node 'model.arrayOfFunctions[14].arrayOfFunctions[0].W' (LearnableParameter operation) operation: Tensor shape was inferred as [128 x 256].
+Node 'model.arrayOfFunctions[17].W' (LearnableParameter operation) operation: Tensor shape was inferred as [2 x 128].
+
+Model has 48 nodes. Using CPU.
+
+Training criterion:   ce = CrossEntropyWithSoftmax
+Evaluation criterion: errs = ClassificationError
+
+Training 9583170 parameters in 14 parameter tensors.
+
+Finished Epoch[ 1 of 12]: [Training] ce = 0.69109741 * 200; errs = 47.000% * 200; totalSamplesSeen = 200; learningRatePerSample = 0.0015625; epochTime=22.3867s
+Finished Epoch[ 2 of 12]: [Training] ce = 0.69240028 * 200; errs = 49.500% * 200; totalSamplesSeen = 400; learningRatePerSample = 0.0015625; epochTime=20.9863s
+Loading (rolling back to) previous model with best training-criterion value: ./output/model/potato_hunter.1.
+learnRatePerSample reduced to 0.00096562501
+SGD: revoke back to and update checkpoint file for epoch 1
+Finished Epoch[ 2 of 12]: [Training] ce = 0.67860115 * 200; errs = 43.500% * 200; totalSamplesSeen = 400; learningRatePerSample = 0.00096562501; epochTime=21.4743s
+Finished Epoch[ 3 of 12]: [Training] ce = 0.65041489 * 200; errs = 37.000% * 200; totalSamplesSeen = 600; learningRatePerSample = 0.00096562501; epochTime=21.2886s
+Finished Epoch[ 4 of 12]: [Training] ce = 0.59747078 * 200; errs = 31.500% * 200; totalSamplesSeen = 800; learningRatePerSample = 0.00096562501; epochTime=21.5021s
+Finished Epoch[ 5 of 12]: [Training] ce = 0.64092728 * 200; errs = 33.000% * 200; totalSamplesSeen = 1000; learningRatePerSample = 0.00096562501; epochTime=21.3964s
+Loading (rolling back to) previous model with best training-criterion value: ./output/model/potato_hunter.4.
+learnRatePerSample reduced to 0.00059675626
+SGD: revoke back to and update checkpoint file for epoch 4
+Finished Epoch[ 5 of 12]: [Training] ce = 0.57887295 * 200; errs = 30.000% * 200; totalSamplesSeen = 1000; learningRatePerSample = 0.00059675626; epochTime=20.8414s
+Setting dropout rate to 0.5.
+Finished Epoch[ 6 of 12]: [Training] ce = 0.59139526 * 200; errs = 30.000% * 200; totalSamplesSeen = 1200; learningRatePerSample = 0.00059675626; epochTime=21.2221s
+Loading (rolling back to) previous model with best training-criterion value: ./output/model/potato_hunter.5.
+learnRatePerSample reduced to 0.00036879537
+SGD: revoke back to and update checkpoint file for epoch 5
+Finished Epoch[ 6 of 12]: [Training] ce = 0.56188416 * 200; errs = 27.500% * 200; totalSamplesSeen = 1200; learningRatePerSample = 0.00036879537; epochTime=21.7357s
+Finished Epoch[ 7 of 12]: [Training] ce = 0.53753056 * 200; errs = 22.000% * 200; totalSamplesSeen = 1400; learningRatePerSample = 0.00036879537; epochTime=21.2609s
+Finished Epoch[ 8 of 12]: [Training] ce = 0.57552120 * 200; errs = 30.500% * 200; totalSamplesSeen = 1600; learningRatePerSample = 0.00036879537; epochTime=21.4147s
+Loading (rolling back to) previous model with best training-criterion value: ./output/model/potato_hunter.7.
+learnRatePerSample reduced to 0.00022791554
+SGD: revoke back to and update checkpoint file for epoch 7
+Finished Epoch[ 8 of 12]: [Training] ce = 0.52585625 * 200; errs = 25.000% * 200; totalSamplesSeen = 1600; learningRatePerSample = 0.00022791554; epochTime=20.9216s
+Finished Epoch[ 9 of 12]: [Training] ce = 0.53402378 * 200; errs = 22.500% * 200; totalSamplesSeen = 1800; learningRatePerSample = 0.00022791554; epochTime=21.2717s
+Loading (rolling back to) previous model with best training-criterion value: ./output/model/potato_hunter.8.
+learnRatePerSample reduced to 0.0001408518
+SGD: revoke back to and update checkpoint file for epoch 8
+Finished Epoch[ 9 of 12]: [Training] ce = 0.52363857 * 200; errs = 23.000% * 200; totalSamplesSeen = 1800; learningRatePerSample = 0.0001408518; epochTime=21.1047s
+Finished Epoch[10 of 12]: [Training] ce = 0.50411102 * 200; errs = 23.000% * 200; totalSamplesSeen = 2000; learningRatePerSample = 0.0001408518; epochTime=21.012s
+Finished Epoch[11 of 12]: [Training] ce = 0.49267311 * 200; errs = 22.500% * 200; totalSamplesSeen = 2200; learningRatePerSample = 0.0001408518; epochTime=20.9213s
+Finished Epoch[12 of 12]: [Training] ce = 0.49101318 * 200; errs = 20.500% * 200; totalSamplesSeen = 2400; learningRatePerSample = 0.0001408518; epochTime=21.0189s
+
+
+##############################################################################
+#                                                                            #
+# Test command (test action)                                                 #
+#                                                                            #
+##############################################################################
+
+evalNodeNames are not specified, using all the default evalnodes and training criterion nodes.
+Final Results: Minibatch[1-1]: errs = 40.000% * 40; ce = 0.68512468 * 40; perplexity = 1.98401919
+
+COMPLETED.
