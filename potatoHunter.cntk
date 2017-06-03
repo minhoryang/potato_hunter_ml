@@ -2,8 +2,9 @@
 
 command = TrainConvNet:Test
 
-precision = "float"; traceLevel = 1 ; deviceId = "auto"
+precision = "float"; traceLevel = 0 ; deviceId = "auto"
 
+stderr = "./output/run.log"
 modelPath = "./output/model/potato_hunter"
 
 TrainConvNet = {
@@ -51,7 +52,7 @@ TrainConvNet = {
 
     SGD = {
         epochSize = 0
-        minibatchSize = 32
+        minibatchSize = 64
 
         learningRatesPerSample = 0.0015625*10:0.00046875*10:0.00015625
         momentumAsTimeConstant = 0*20:607.44
