@@ -51,7 +51,7 @@ TrainConvNet = {
 
     SGD = {
         epochSize = 0
-        minibatchSize = 64
+        minibatchSize = 32
 
         learningRatesPerSample = 0.0015625*10:0.00046875*10:0.00015625
         momentumAsTimeConstant = 0*20:607.44
@@ -83,9 +83,9 @@ TrainConvNet = {
                         transforms = (
                             [
                                 type = "Crop"
-                                cropType = "RandomSide"
-                                sideRatio = 1.00
-                                jitterType = "UniRatio"
+                                cropType = "Center"
+                                sideRatio = 0.50
+                                jitterType = "None"
                             ]:[
                                 type = "Scale"
                                 interpolations = "linear"
@@ -128,8 +128,8 @@ Test = [
                         [
                             type = "Crop"
                             cropType = "Center"
-                            sideRatio = 1.00
-                            jitterType = "UniRatio"
+                            sideRatio = 0.50
+                            jitterType = "None"
                         ]:[
                             type = "Scale"
                             interpolations = "linear"
