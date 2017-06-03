@@ -54,13 +54,28 @@ TrainConvNet = {
         epochSize = 0
         minibatchSize = 64
 
-        learningRatesPerSample = 0.0015625*10:0.00046875*10:0.00015625
         momentumAsTimeConstant = 0*20:607.44
-        maxEpochs = 30
+        maxEpochs = 12
         L2RegWeight = 0.002
         dropoutRate = 0*5:0.2
 
         numMBsToShowResult = 100
+	learningRatesPerSample = 0.0015625
+	keepCheckPointFiles = true
+	autoAdjust = {
+		autoAdjustLR = "adjustAfterEpoch"
+		autoAdjustMinibatch = false
+
+		# for autoAdjustLR = "adjustAfterEpoch":
+		reduceLearnRateIfImproveLessThan = 0
+		learnRateDecreaseFactor = 0.618
+		increaseLearnRateIfImproveMoreThan = infinity
+		learnRateIncreaseFactor = 1.382
+		loadBestModel = true
+		learnRateAdjustInterval = 1
+		useCVSetControlLRIfCVExists = true
+		useEvalCriterionControlLR = false
+	}
     }
     reader = [
         verbosity = 0
