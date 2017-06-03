@@ -1,0 +1,148 @@
+# ConvNet applied on Animals dataset, with no data augmentation.
+
+command = TrainConvNet:Test
+
+precision = "float"; traceLevel = 1 ; deviceId = "auto"
+
+modelPath = "./output/model/potato_hunter"
+
+TrainConvNet = {
+    action = "train"
+
+    BrainScriptNetworkBuilder = {
+        imageShape = 100:100:3
+        labelDim = 2
+
+        featMean = 128
+        featScale = 1/256
+        Normalize{m,f} = x => f .* (x - m)
+
+        model = Sequential (
+            Normalize {featMean, featScale} :
+            ConvolutionalLayer {64, (3:3), pad = true} : ReLU : 
+            ConvolutionalLayer {64, (3:3), pad = true} : ReLU : 
+              MaxPoolingLayer {(3:3), stride = (2:2)} :
+            ConvolutionalLayer {64, (3:3), pad = true} : ReLU : 
+            ConvolutionalLayer {64, (3:3), pad = true} : ReLU : 
+              MaxPoolingLayer {(3:3), stride = (2:2)} :
+            DenseLayer {256} : ReLU : Dropout : 
+            DenseLayer {128} : ReLU : Dropout : 
+            LinearLayer {labelDim}
+        )
+
+        # inputs
+        features = Input {imageShape}
+        labels   = Input {labelDim}
+
+        # apply model to features
+        z = model (features)
+
+        # connect to system
+        ce       = CrossEntropyWithSoftmax     (labels, z)
+        errs     = ClassificationError         (labels, z)
+        top5Errs = ClassificationError         (labels, z, topN=5)  # only used in Eval action
+
+        featureNodes    = (features)
+        labelNodes      = (labels)
+        criterionNodes  = (ce)
+        evaluationNodes = (errs)  # top5Errs only used in Eval
+        outputNodes     = (z)
+    }
+
+    SGD = {
+        epochSize = 0
+        minibatchSize = 64
+
+        learningRatesPerSample = 0.0015625*10:0.00046875*10:0.00015625
+        momentumAsTimeConstant = 0*20:607.44
+        maxEpochs = 30
+        L2RegWeight = 0.002
+        dropoutRate = 0*5:0.5
+
+        numMBsToShowResult = 100
+    }
+    reader = [
+        verbosity = 0
+        randomize = true
+
+        # A list of deserializers the reader uses.
+        deserializers = ([
+                # Type of deserializer, in this case the one that knows
+                # how to deserialize HTK feature files.
+                type = "ImageDeserializer"
+                # Module (.dll or .so) where this deserializer is implemented
+                module = "ImageReader"
+                # mapping file
+                file = "./train_map.txt"
+
+                # Description of input streams the deserializer provides,
+                # can be one or many, depending on a particular
+                # deserializer implementation
+                input = [
+                    features = [
+                        transforms = (
+                            [
+                                type = "Crop"
+                                cropType = "RandomSide"
+                                sideRatio = 1.00
+                                jitterType = "UniRatio"
+                            ]:[
+                                type = "Scale"
+                                interpolations = "linear"
+                                width = 100
+                                height = 100
+                                channels = 3
+                            ]
+                        )
+                    ]
+                    labels = [
+                        labelDim = 2
+                    ]
+                ]
+        ])
+    ]
+}
+
+Test = [
+    action = "test"
+    reader = [
+        verbosity = 0
+        randomize = true
+
+        # A list of deserializers the reader uses.
+        deserializers = ([
+            # Type of deserializer, in this case the one that knows
+            # how to deserialize HTK feature files.
+            type = "ImageDeserializer"
+            # Module (.dll or .so) where this deserializer is implemented
+            module = "ImageReader"
+            # mapping file
+            file = "./test_map.txt"
+
+            # Description of input streams the deserializer provides,
+            # can be one or many, depending on a particular
+            # deserializer implementation
+            input = [
+                features = [
+                    transforms = (
+                        [
+                            type = "Crop"
+                            cropType = "Center"
+                            sideRatio = 1.00
+                            jitterType = "UniRatio"
+                        ]:[
+                            type = "Scale"
+                            interpolations = "linear"
+                            width = 100
+                            height = 100
+                            channels = 3
+                        ]
+                    )
+                ]
+                labels = [
+                    labelDim = 2
+                ]
+            ]
+        ])
+    ]
+]
